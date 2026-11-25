@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "StudyPath AI for Canvas",
+  "short_name": "StudyPath",
+  "version": "0.1.0",
+  "description": "A study coach panel on your Canvas pages: today's plan, grades to watch, what's due and what's missing. Read-only, data stays in your browser.",
+  "icons": { "16": "icons/icon-16.png", "32": "icons/icon-32.png", "48": "icons/icon-48.png", "128": "icons/icon-128.png" },
+  "action": {
+    "default_title": "StudyPath AI",
+    "default_popup": "popup.html",
+    "default_icon": { "16": "icons/icon-16.png", "32": "icons/icon-32.png", "48": "icons/icon-48.png" }
+  },
+  "permissions": ["storage", "scripting", "activeTab"],
+  "host_permissions": ["https://*.instructure.com/*"],
+  "optional_host_permissions": ["https://*/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://*.instructure.com/*"],
+      "js": ["logic.js", "canvas-api.js", "panel.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    { "resources": ["panel.css", "icons/icon-48.png"], "matches": ["https://*/*"] }
+  ]
+}

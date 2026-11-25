@@ -56,6 +56,13 @@ It comes in two versions built from the same code:
 - **Students stay in control.** Download everything (JSON, CSV), move to a new device with the file,
   or delete everything (device and cloud) from Profile.
 
+## Canvas extension
+
+`canvas-extension/` is a Chrome/Edge extension that adds a StudyPath panel to Canvas pages: today's plan
+from the student's real Canvas grades, missing work, what's due, and a link to the tutor. It is read-only and
+keeps data in the browser. It also explains how an official Canvas integration (LTI 1.3) would work.
+See [canvas-extension/README.md](canvas-extension/README.md).
+
 ## Run it on your computer
 
 ```bash

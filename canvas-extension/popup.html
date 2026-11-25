@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>StudyPath AI</title>
+<style>
+  :root { --bg:#fff; --ink:#14203a; --muted:#5d6782; --line:#dde2ec; --accent:#2f6bff; --accent-ink:#fff; --soft:#f7f8fb; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#161e31; --ink:#e8ecf6; --muted:#9aa5c0; --line:#26304a; --accent:#6b95ff; --accent-ink:#0b1226; --soft:#111a2c; } }
+  body { width: 300px; margin: 0; padding: 14px; background: var(--bg); color: var(--ink); font: 14px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  header { display: flex; gap: 10px; align-items: center; margin-bottom: 10px; }
+  header img { width: 36px; height: 36px; border-radius: 10px; }
+  header b { display: block; font-size: 16px; }
+  header span, .muted { color: var(--muted); font-size: 12px; }
+  .card { border: 1px solid var(--line); border-radius: 12px; padding: 10px; margin-top: 10px; background: var(--soft); }
+  button { width: 100%; margin-top: 8px; padding: 8px; border: 0; border-radius: 10px; background: var(--accent); color: var(--accent-ink); font: inherit; font-weight: 600; cursor: pointer; }
+  button.ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); }
+  label { display: flex; gap: 8px; align-items: center; }
+  p { margin: 0; }
+</style>
+</head>
+<body>
+  <header>
+    <img src="icons/icon-48.png" alt="">
+    <div><b>StudyPath AI</b><span>Your study coach for Canvas</span></div>
+  </header>
+  <div class="card" id="status"><p class="muted">Checking this tab…</p></div>
+  <div class="card">
+    <label><input type="checkbox" id="demo"> Demo mode (made-up student)</label>
+    <p class="muted">Use it when presenting, so no real grades are shown.</p>
+    <button class="ghost" id="open-demo">Open the demo page</button>
+  </div>
+  <p class="muted" style="margin-top:10px">Read-only. Your grades stay in this browser.</p>
+  <script src="popup.js"></script>
+</body>
+</html>
